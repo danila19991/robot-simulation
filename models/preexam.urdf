@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+
+<robot name="cube">
+
+  <material name="black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+  <material name="blue">
+    <color rgba="0.203125 0.23828125 0.28515625 1.0"/>
+  </material>
+  <material name="green">
+    <color rgba="0.0 0.8 0.0 1.0"/>
+  </material>
+  <material name="grey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+  <material name="orange">
+    <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
+  </material>
+  <material name="brown">
+    <color rgba="0.870588235294 0.811764705882 0.764705882353 1.0"/>
+  </material>
+  <material name="red">
+    <color rgba="0.80078125 0.12890625 0.1328125 1.0"/>
+  </material>
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+
+    <link name="world"/>
+    <link name="obj1">
+        <visual>
+            <geometry>
+                <box size="0.2 0.2 0.2"/>
+                <!-- mesh filename="meshes2/files/alternative_white.stl" scale="0.0051 0.0051 0.0051"/ -->
+            </geometry>
+            <origin xyz="0 0 0.1" rpy="0 0 0" />
+          <material name="blue"/>
+        </visual>
+    </link>
+    <joint name="world_to_obj1" type="fixed">
+        <parent link="world"/>
+        <child link="obj1"/>
+        <origin xyz="-0.5 -0.8 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="obj2">
+        <visual>
+            <geometry>
+                <box size="0.2 0.2 0.2"/>
+                <!-- mesh filename="meshes2/files/alternative_white.stl" scale="0.0051 0.0051 0.0051"/ -->
+            </geometry>
+            <origin xyz="0 0 0.1" rpy="0 0 0" />
+          <material name="orange"/>
+        </visual>
+    </link>
+    <joint name="world_to_obj2" type="fixed">
+        <parent link="world"/>
+        <child link="obj2"/>
+        <origin xyz="-0.1 -0.5 0" rpy="0 0 0"/>
+    </joint>
+
+</robot>

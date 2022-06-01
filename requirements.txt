@@ -1,0 +1,9 @@
+pybullet
+numpy
+matplotlib
+opencv-contrib-python
+camera
+scipy
+modern_robotics
+geneticalgorithm
+seaborn
